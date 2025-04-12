@@ -1,0 +1,7 @@
+{
+  "name": "Seremi",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
