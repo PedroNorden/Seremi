@@ -1,0 +1,16 @@
+.header-logo{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen al contenedor */
+  object-position: center top; /* Centra la imagen en la parte superior */
+  margin: 0; 
+  position: relative;
+}
+
+ion-toolbar{
+  padding: 0;
+  height: 250px;
+  display: flex; 
+  align-items: stretch;
+  position: relative;
+}
