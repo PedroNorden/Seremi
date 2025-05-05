@@ -5,7 +5,7 @@
   position: relative;
 }
 
-ion-header ul#menu-principal {
+header ul#menu-principal {
   color: #475156;
   font-family: 'Tahoma';
   font-size: 14px;
@@ -21,7 +21,7 @@ ion-header ul#menu-principal {
   align-items: center;
 }
 
-ion-header ul {
+header ul {
   padding: 0;
   background: #fff;
   display: table-row;
@@ -29,7 +29,7 @@ ion-header ul {
   box-sizing: border-box;
 }
 
-ion-header {
+header {
   box-sizing: border-box;
   display: block;
   width: 100%;
