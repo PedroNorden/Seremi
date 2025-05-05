@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page'; 'src/app/components/header/header.component';
-import { HomePageRoutingModule } from './home-routing.module';
+
+import { IonicModule } from '@ionic/angular';
+
+import { JuegosPageRoutingModule } from './juegos-routing.module';
 import { SharedModule } from 'src/app/shared/shared.module';
+import { JuegosPage } from './juegos.page';
 
 @NgModule({
   imports: [
@@ -12,9 +14,8 @@ import { SharedModule } from 'src/app/shared/shared.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule
+    JuegosPageRoutingModule
   ],
-  declarations: [HomePage],
-  
+  declarations: [JuegosPage]
 })
-export class HomePageModule {}
+export class JuegosPageModule {}
