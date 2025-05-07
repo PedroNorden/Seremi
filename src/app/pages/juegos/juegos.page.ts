@@ -17,7 +17,7 @@ export class JuegosPage implements OnInit {
 
   async selectAnswer(ageGroup: string){
     await this.storageService.set('ageGroup', ageGroup);
-    this.navCtrl.navigateForward('/juegos/juegos-2');
+    this.navCtrl.navigateForward('/home');
   }
   ngOnInit() {
   }
