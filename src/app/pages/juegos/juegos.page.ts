@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/services/storage.service';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-juegos',
@@ -8,8 +10,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JuegosPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private storageService: StorageService,
+    private navCtrl: NavController
+  ) { }
 
+  async selectAnswer(ageGroup: string){
+    await this.storageService.set('ageGroup', ageGroup);
+    this.navCtrl.navigateForward('/juegos/juegos-2');
+  }
   ngOnInit() {
   }
 

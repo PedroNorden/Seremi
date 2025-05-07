@@ -1,34 +1,40 @@
-ion-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+/* Estructura principal */
+.age-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+height: 100%;
+gap: 2rem;
+padding: 1rem;
 }
 
-ion-toolbar{
-    display: table;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    
-    margin: 10%;
-    height: 30%;
-    width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
-    align-items: center;
+/* Texto de pregunta */
+.question-text {
+text-align: center;
+width: 100%;
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
 }
 
-ion-button{
-    align-items: center;
-    margin: 8px 0;
-    width: 20%;
-    max-width: 300px;
+/* Fila de botones */
+.buttons-row {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+gap: 1rem;
+width: 100%;
 }
 
-p{
-    text-align: center;
+.age-button {
+--border-radius: 8px;
+min-width: 150px;
+max-width: 200px;
+height: 50px;
+font-weight: 500;
 }
