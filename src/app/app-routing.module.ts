@@ -18,6 +18,10 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
   },
+  {
+    path: 'juegos2',
+    loadChildren: () => import('./pages/juegos2/juegos2.module').then( m => m.Juegos2PageModule)
+  },
 
 ];
 
