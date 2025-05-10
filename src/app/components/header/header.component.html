@@ -3,12 +3,16 @@
       <h1 id="logo-main"></h1>
           <img class='imagen' src="https://dipol.minsal.cl/wp-content/uploads/2018/06/logo-minsal2018.png">
           <ul id="menu-principal">
-              <li class="menu-item">Inicio</li>
-              <li class="menu-item">Servicios</li>
-              <li class="menu-item">Informacion</li>
-              <li class="menu-item">Juegos</li>
-              <li class="menu-item">Mi cuenta</li>
-              <li class="menu-item">Contacto</li>
+
+            <li class="menu-item"><ion-button fill="clear" [routerLink]="['/home']">Inicio</ion-button></li>
+          
+            <li class="menu-item"><ion-button fill="clear" [routerLink]="['/juegos']">Juegos</ion-button></li>
+
+            <li class="menu-item"><ion-button fill="clear" [routerLink]="['/login']">Mi cuenta</ion-button></li>
+
+            <li class="menu-item"><button onclick="handleButtonClick('Contacto')">Contacto</button></li>
           </ul>
   </div>
 </ion-header>
+
+
