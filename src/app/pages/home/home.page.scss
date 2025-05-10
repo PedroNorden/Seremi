@@ -1,0 +1,30 @@
+.contenido-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+    gap: 20px;
+  
+    .contenido {
+      flex: 1;
+      padding-right: 20px;
+    }
+  
+    .banners-laterales {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+      position: relative;
+      top : -50px;
+        left: -50px;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      }
+    }
+  }
+  
