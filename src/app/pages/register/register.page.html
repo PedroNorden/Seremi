@@ -1,0 +1,43 @@
+<app-header></app-header>
+
+<form class="form">
+  <p class="form-title">Crear Cuenta</p>
+
+  <div class="input-container">
+    <input type="text" placeholder="Nombre completo">
+  </div>
+
+  <div class="input-container">
+    <input type="text" placeholder="RUT" [(ngModel)]="rut" name="rut" (keypress)="permitirRut($event)">
+
+  </div>
+
+  <div class="input-container">
+    <input type="email" placeholder="Correo electrónico">
+  </div>
+
+  <div class="input-container">
+    <input type="text" placeholder="Región">
+  </div>
+
+  <div class="input-container">
+    <input type="text" placeholder="Comuna">
+  </div>
+
+  <div class="input-container">
+    <input type="password" placeholder="Contraseña">
+  </div>
+
+  <div class="input-container">
+    <input type="password" placeholder="Confirmar contraseña">
+  </div>
+
+  <div class="checkbox-container">
+    <input type="checkbox" id="terms" required>
+    <label for="terms">
+      Al registrarte, aceptas nuestros <a href="#">Términos de Servicio</a> y <a href="#">Política de Privacidad</a>. Revisa cómo usaremos tus datos.
+    </label>
+  </div>
+
+  <button type="submit" class="submit">CREAR CUENTA</button>
+</form>

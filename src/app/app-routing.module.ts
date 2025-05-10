@@ -23,7 +23,11 @@ const routes: Routes = [
   {
     path: 'juegos2',
     loadChildren: () => import('./pages/juegos2/juegos2.module').then( m => m.Juegos2PageModule)
+  },  {
+    path: 'register',
+    loadChildren: () => import('./pages/register/register.module').then( m => m.RegisterPageModule)
   },
+
   
 ];
 
