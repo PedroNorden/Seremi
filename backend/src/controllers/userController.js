@@ -47,10 +47,26 @@ const userController = {
                 return res.status(401).json({ message: 'Contraseña incorrecta' });
             }
             const JWT_SECRET = process.env.JWT_SECRET;
-            const token = jwt.sign(user, process.env.JWT_SECRET, { expiresIn: '1h' });
+            const token = jwt.sign({ id: user[0].id, rut: user[0].rut }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            res.json({ message: 'Inicio de sesión exitoso', token});
         }
         catch (err) {
             res.status(500).json({ error: err });
         }
+    },
+    profile: (req, res) => {
+        res.json({
+            message: 'Perfil de usuario',
+            user: {
+                id: req.user.id,
+                rut: req.user.rut,
+                nombre: req.user.nombre,
+                email: req.user.email,
+                region: req.user.region,
+                comuna: req.user.comuna
+            }
+        })
     }
 }
+
+module.exports = userController;
