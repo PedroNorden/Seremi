@@ -7,8 +7,8 @@ const UserModel = {
     create: (user, callback) => {
         db.query('INSERT INTO usuarios SET ?', user, callback);
     },
-    findByUsername: (username, callback) => {
-        db.query('SELECT * FROM usuarios WHERE username = ?', [username], callback);
+    findByRut: (rut, callback) => {
+        db.query('SELECT * FROM usuarios WHERE rut = ?', [rut], callback);
     }
 };
 

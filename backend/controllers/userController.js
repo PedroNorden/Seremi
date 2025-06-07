@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/userModel');
+const UserModel = require('../models/userModel');
 const bcrypt = require('bcrypt');
 
 const userController = {
@@ -19,8 +19,9 @@ const userController = {
           if (existingUser.length > 0) {
             return res.status(400).json({ message: 'Usuario ya registrado' });
           }
-      
-          const result = await UserModel.create({ nombre, rut, email, region, comuna, password });
+
+          password_hash = await bcrypt.hash(password, 10);
+          const result = await UserModel.create({ nombre, rut, email, region, comuna, password: password_hash });
           res.status(201).json({
             message: 'Usuario registrado exitosamente',
             userId: result.insertId,
@@ -47,7 +48,7 @@ const userController = {
                 return res.status(401).json({ message: 'Contraseña incorrecta' });
             }
             const JWT_SECRET = process.env.JWT_SECRET;
-            const token = jwt.sign({ id: user[0].id, rut: user[0].rut }, process.env.JWT_SECRET, { expiresIn: '1h' });
+            const token = jwt.sign({ id: user[0].id, rut: user[0].rut }, JWT_SECRET, { expiresIn: '1h' });
             res.json({ message: 'Inicio de sesión exitoso', token});
         }
         catch (err) {
