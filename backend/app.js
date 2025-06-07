@@ -1,18 +1,16 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
+const express = require('express');
+const cors = require('cors');
+const userRoutes = require('./routes/userRoutes'); // sin .js si usas CommonJS
+require('dotenv').config();
 
 const app = express();
-dotenv.config();
-
-const userRoutes = require('./routes/userRoutes');
 
 app.use(cors());
 app.use(express.json());
-app.use('/api/users', userRoutes);
+app.use('/api', userRoutes);
 
-config = {SERVER: process.env.SERVER || 'http://localhost', PORT: process.env.PORT || 3000};
-const PORT = config.PORT;
+const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
-    console.log(`Servidor corriendo en ${config.SERVER}:${PORT}`);
+  console.log(`✅ Servidor corriendo en puerto ${PORT}`);
 });
