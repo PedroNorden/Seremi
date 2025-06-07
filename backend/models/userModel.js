@@ -1,4 +1,3 @@
-const { use } = require('react');
 const db = require('../config/db');
 
 const UserModel = {
