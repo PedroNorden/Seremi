@@ -19,14 +19,18 @@
   </div>
 
   <div class="input-container">
-    <input type="text" placeholder="Región (ID)"
-           [(ngModel)]="usuario.region_id" name="region_id">
-  </div>
+  <select [(ngModel)]="usuario.region_id" name="region_id" (change)="filtrarComunas()">
+    <option value="">Seleccione una región</option>
+    <option *ngFor="let region of regiones" [value]="region.id">{{ region.region }}</option>
+  </select>
+</div>
 
   <div class="input-container">
-    <input type="text" placeholder="Comuna (ID)"
-           [(ngModel)]="usuario.comuna_id" name="comuna_id">
-  </div>
+  <select [(ngModel)]="usuario.comuna_id" name="comuna_id">
+    <option value="">Seleccione una comuna</option>
+    <option *ngFor="let comuna of comunasFiltradas" [value]="comuna.id">{{ comuna.comuna }}</option>
+  </select>
+</div>
 
   <div class="input-container">
     <input type="password" placeholder="Contraseña"
@@ -35,7 +39,6 @@
 
   <div class="input-container">
     <input type="password" placeholder="Confirmar contraseña">
-    <!-- (puedes agregar validación aquí luego) -->
   </div>
 
   <div class="checkbox-container">

@@ -75,4 +75,22 @@
     border-radius: 0.5rem;
     text-transform: uppercase;
   }
+
+  .input-container select {
+  background-color: #fff;
+  padding: 1rem;
+  padding-right: 3rem;
+  margin: 8px 0;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
   

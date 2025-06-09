@@ -11,10 +11,31 @@ export class RegisterPage implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  regiones: any[] = [];
+  comunas: any[] = [];
+  comunasFiltradas: any[] = [];
+
   ngOnInit() {
+    this.cargarRegionesYComunas();
+  }
+
+  cargarRegionesYComunas() {
+    fetch('http://localhost:3000/api/regiones')
+      .then(res => res.json())
+      .then(data => {
+        this.regiones = data.regiones; 
+        this.comunas = data.comunas;
+      })
+      .catch(err => console.error('❌ Error cargando regiones y comunas:', err));
+  }
+
+  
+  filtrarComunas() {
+    this.comunasFiltradas = this.comunas.filter(c => c.region_id == this.usuario.region_id);
   }
 
   rut: string = '';
+
   usuario = {
     nombre_completo: '',
     rut: '',
