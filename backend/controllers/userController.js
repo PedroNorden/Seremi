@@ -70,7 +70,7 @@ const userController = {
 
       const user = users[0];
 
-      bcrypt.compare(password, user.password, (err, isMatch) => {
+      bcrypt.compare(password, user.contraseña, (err, isMatch) => {
         if (err) return res.status(500).json({ error: err });
 
         if (!isMatch) {
