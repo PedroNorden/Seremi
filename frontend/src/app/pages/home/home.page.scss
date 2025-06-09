@@ -1,0 +1,45 @@
+.grid-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px 20px;
+    align-items: start;
+  
+    .contenido {
+
+      font-family: 'Inter';
+      margin-left: 5%;
+      text-align: justify;
+      margin-right: 4%;
+
+      h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+  
+      p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 15px;
+      }
+    }
+  
+    .banners-laterales {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 80%;
+      max-height: 80%;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 4px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+  
