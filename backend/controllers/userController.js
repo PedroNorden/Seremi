@@ -31,13 +31,13 @@ const userController = {
             nombre_completo,
             rut,
             correo,
-            contraseña: hash, // ✅ Usa el nombre correcto de la columna
+            contraseña: hash, 
             region_id,
             comuna_id
             };
 
 
-        console.log("🛠️ Datos a insertar:", newUser); // debug opcional
+        console.log("🛠️ Datos a insertar:", newUser); 
 
         UserModel.create(newUser, (err, result) => {
           if (err) {

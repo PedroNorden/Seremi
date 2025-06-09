@@ -1,41 +1,47 @@
 <app-header></app-header>
 
-<form class="form">
+<form class="form" (ngSubmit)="registrarUsuario()">
   <p class="form-title">Crear Cuenta</p>
 
   <div class="input-container">
-    <input type="text" placeholder="Nombre completo">
+    <input type="text" placeholder="Nombre completo"
+           [(ngModel)]="usuario.nombre_completo" name="nombre_completo">
   </div>
 
   <div class="input-container">
-    <input type="text" placeholder="RUT" [(ngModel)]="rut" name="rut" (keypress)="permitirRut($event)">
-
+    <input type="text" placeholder="RUT"
+           [(ngModel)]="usuario.rut" name="rut" (keypress)="permitirRut($event)">
   </div>
 
   <div class="input-container">
-    <input type="email" placeholder="Correo electrónico">
+    <input type="email" placeholder="Correo electrónico"
+           [(ngModel)]="usuario.correo" name="correo">
   </div>
 
   <div class="input-container">
-    <input type="text" placeholder="Región">
+    <input type="text" placeholder="Región (ID)"
+           [(ngModel)]="usuario.region_id" name="region_id">
   </div>
 
   <div class="input-container">
-    <input type="text" placeholder="Comuna">
+    <input type="text" placeholder="Comuna (ID)"
+           [(ngModel)]="usuario.comuna_id" name="comuna_id">
   </div>
 
   <div class="input-container">
-    <input type="password" placeholder="Contraseña">
+    <input type="password" placeholder="Contraseña"
+           [(ngModel)]="usuario.password" name="password">
   </div>
 
   <div class="input-container">
     <input type="password" placeholder="Confirmar contraseña">
+    <!-- (puedes agregar validación aquí luego) -->
   </div>
 
   <div class="checkbox-container">
     <input type="checkbox" id="terms" required>
     <label for="terms">
-      Al registrarte, aceptas nuestros <a href="#">Términos de Servicio</a> y <a href="#">Política de Privacidad</a>. Revisa cómo usaremos tus datos.
+      Al registrarte, aceptas nuestros <a href="#">Términos de Servicio</a> y <a href="#">Política de Privacidad</a>.
     </label>
   </div>
 
